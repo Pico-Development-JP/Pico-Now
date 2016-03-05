@@ -8,9 +8,9 @@
  * @license http://opensource.org/licenses/MIT
  * @version 1.0
  */
-class Pico_Now {
+class Pico_Now extends AbstractPicoPlugin {
 
-	public function after_render(&$output)
+  public function onPageRendered(&$output)
 	{
     $now = new DateTime();
   	$output = preg_replace_callback('/#now\(([\w\s\/\-\:年月日時分秒]+)\)/', function($m) use ($now){
