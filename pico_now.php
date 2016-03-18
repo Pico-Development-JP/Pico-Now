@@ -10,6 +10,8 @@
  */
 class Pico_Now extends AbstractPicoPlugin {
 
+  protected $enabled = false;
+
   public function onPageRendered(&$output)
 	{
     $now = new DateTime();
